@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>सार्वभौम शाकद्वीपीय ब्राह्मण महासभा — परिचयात्मक प्रपत्र</title>
+<style>
+:root{--primary:#0b67a1;--accent:#e59b2b;--bg:#f4f7fa;--text:#243447;--muted:#64748b}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;color:var(--text)}
+header{background:linear-gradient(135deg,#075985,#0b67a1);color:#fff;padding:28px 18px;text-align:center}
+header h1{font-size:clamp(21px,4vw,32px);margin:0 0 6px} header p{margin:0;opacity:.9}
+.app{max-width:900px;margin:22px auto;padding:0 14px}
+.card{background:#fff;border-radius:16px;box-shadow:0 5px 22px #00000012;margin-bottom:18px;overflow:hidden}
+.card h2{font-size:19px;margin:0;padding:16px 18px;border-bottom:1px solid #e8edf2;color:var(--primary)}
+.card-body{padding:18px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.field label{display:block;font-weight:600;margin-bottom:6px;font-size:14px}.field small{display:block;color:var(--muted);font-weight:400;margin-top:3px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #cbd5e1;border-radius:9px;font-size:15px;background:#fff}
+textarea{min-height:90px;resize:vertical}.full{grid-column:1/-1}
+.member-table{width:100%;border-collapse:collapse}.member-table th,.member-table td{border:1px solid #dbe3ea;padding:7px}.member-table th{background:#f8fafc;font-size:13px}.member-table input{border:0;padding:7px;border-radius:4px}
+.choice{display:flex;gap:18px;flex-wrap:wrap}.choice label{font-weight:400;display:flex;gap:6px;align-items:center}
+.actions{display:flex;justify-content:space-between;gap:10px;position:sticky;bottom:0;background:#fff;padding:14px;border-radius:14px;box-shadow:0 -3px 18px #00000012}
+button{border:0;border-radius:10px;padding:12px 22px;font-weight:700;font-size:15px;cursor:pointer}
+.primary{background:var(--primary);color:#fff}.secondary{background:#e8eef3;color:#334155}
+.progress-wrap{background:#fff;padding:14px 18px;position:sticky;top:0;z-index:5;border-bottom:1px solid #e5e7eb}
+.progress-top{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:7px}
+.progress{height:8px;background:#e5e7eb;border-radius:20px;overflow:hidden}.bar{height:100%;background:var(--accent);width:0;transition:.3s}
+.step{display:none}.step.active{display:block}
+.success{text-align:center;padding:45px 20px}.success .icon{font-size:55px}.error{color:#b91c1c;font-size:13px;margin-top:5px;display:none}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.member-table{font-size:12px}.member-table th,.member-table td{padding:4px}header{padding:22px 12px}}
+@media print{.actions,.progress-wrap,header{display:none}.card{box-shadow:none;border:1px solid #ddd}}
+</style>
+</head>
+<body>
+<header>
+  <h1>सार्वभौम शाकद्वीपीय ब्राह्मण महासभा</h1>
+  <p>परिचयात्मक प्रपत्र</p>
+</header>
+
+<div class="progress-wrap">
+  <div class="progress-top"><span id="stepLabel">व्यक्तिगत विवरण</span><span id="pct">20%</span></div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+</div>
+
+<main class="app">
+<form id="survey">
+
+<section class="step active" data-title="व्यक्तिगत विवरण">
+<div class="card"><h2>क — व्यक्तिगत विवरण</h2><div class="card-body grid">
+  <div class="field"><label>नाम *</label><input name="name" required></div>
+  <div class="field"><label>पिता का नाम</label><input name="father"></div>
+  <div class="field"><label>मोबाइल</label><input name="mobile" inputmode="tel"></div>
+  <div class="field"><label>WhatsApp</label><input name="whatsapp" inputmode="tel"></div>
+  <div class="field full"><label>ई-मेल (यदि हो)</label><input name="email" type="email"></div>
+
+  <div class="field"><label>वर्तमान निवास — मकान नं.</label><input name="current_house"></div>
+  <div class="field"><label>मोहल्ला / ग्राम</label><input name="current_area"></div>
+  <div class="field"><label>पंचायत / वार्ड</label><input name="current_ward"></div>
+  <div class="field"><label>पोस्ट</label><input name="current_post"></div>
+  <div class="field"><label>जिला</label><input name="current_district"></div>
+  <div class="field"><label>पिन</label><input name="current_pin" inputmode="numeric"></div>
+
+  <div class="field"><label>स्थायी निवास — मकान नं.</label><input name="permanent_house"></div>
+  <div class="field"><label>मोहल्ला / ग्राम</label><input name="permanent_area"></div>
+  <div class="field"><label>पंचायत / वार्ड</label><input name="permanent_ward"></div>
+  <div class="field"><label>पोस्ट</label><input name="permanent_post"></div>
+  <div class="field"><label>जिला</label><input name="permanent_district"></div>
+  <div class="field"><label>पिन</label><input name="permanent_pin" inputmode="numeric"></div>
+</div></div>
+</section>
+
+<section class="step" data-title="सामाजिक एवं पारिवारिक विवरण">
+<div class="card"><h2>ख — सामाजिक एवं पारिवारिक विवरण</h2><div class="card-body grid">
+  <div class="field"><label>पुर गोत्र</label><input name="gotra"></div>
+  <div class="field"><label>परिवार में सदस्यों की संख्या</label><input name="family_count" type="number" min="0"></div>
+  <div class="field full"><label>परिवार के सदस्यों का विवरण</label>
+  <table class="member-table"><thead><tr><th>नाम</th><th>संबंध</th><th>मोबाइल नं.</th><th>आयु (लगभग)</th></tr></thead>
+  <tbody id="members"></tbody></table>
+  </div>
+  <div class="field full"><label>पैतृक निवास स्थान</label></div>
+  <div class="field"><label>मोहल्ला / ग्राम</label><input name="ancestral_area"></div>
+  <div class="field"><label>पंचायत / वार्ड</label><input name="ancestral_ward"></div>
+  <div class="field"><label>पोस्ट</label><input name="ancestral_post"></div>
+  <div class="field"><label>नगर</label><input name="ancestral_city"></div>
+  <div class="field"><label>जिला</label><input name="ancestral_district"></div>
+  <div class="field"><label>राज्य</label><input name="ancestral_state"></div>
+</div></div>
+</section>
+
+<section class="step" data-title="शैक्षणिक एवं व्यावसायिक विवरण">
+<div class="card"><h2>ग — शैक्षणिक एवं व्यावसायिक विवरण</h2><div class="card-body grid">
+  <div class="field full"><label>उच्चतम शैक्षणिक योग्यता</label><input name="education"></div>
+  <div class="field"><label>व्यवसाय / नौकरी</label><input name="occupation"></div>
+  <div class="field"><label>पदनाम / व्यवसाय का नाम</label><input name="designation"></div>
+  <div class="field"><label>व्यवसाय / नौकरी की प्रकृति</label><input name="job_nature"></div>
+  <div class="field"><label>जिला</label><input name="job_district"></div>
+  <div class="field"><label>राज्य</label><input name="job_state"></div>
+  <div class="field full"><label>विशेष उपलब्धियां</label><textarea name="achievements"></textarea></div>
+</div></div>
+</section>
+
+<section class="step" data-title="वैवाहिक विवरण">
+<div class="card"><h2>घ — वैवाहिक विवरण</h2><div class="card-body grid">
+  <div class="field"><label>जीवन साथी का नाम</label><input name="spouse"></div>
+  <div class="field"><label>जीवन साथी की शिक्षा</label><input name="spouse_education"></div>
+  <div class="field"><label>विवाह का वर्ष</label><input name="marriage_year" inputmode="numeric"></div>
+  <div class="field"><label>बच्चों की संख्या</label><input name="children_count" type="number" min="0"></div>
+  <div class="field full"><label>बच्चों का विवरण</label>
+  <table class="member-table"><thead><tr><th>नाम</th><th>आयु (लगभग)</th><th>मोबाइल नं.</th><th>वैवाहिक स्थिति</th></tr></thead>
+  <tbody id="children"></tbody></table>
+  </div>
+</div></div>
+</section>
+
+<section class="step" data-title="सामाजिक गतिविधियां">
+<div class="card"><h2>ङ — सामाजिक गतिविधियों का विवरण</h2><div class="card-body grid">
+  <div class="field full"><label>समाज में सहभागिता</label>
+    <div class="choice">
+      <label><input type="radio" name="participation" value="सक्रिय"> सक्रिय</label>
+      <label><input type="radio" name="participation" value="आंशिक सक्रिय"> आंशिक सक्रिय</label>
+      <label><input type="radio" name="participation" value="समयाभाव"> समयाभाव</label>
+    </div>
+  </div>
+  <div class="field full"><label>सामाजिक संस्था / संगठन से जुड़ाव</label><textarea name="organizations"></textarea></div>
+  <div class="field full"><label>अन्य गतिविधियों का विवरण</label><textarea name="other_activities" style="min-height:160px"></textarea></div>
+</div></div>
+</section>
+
+<div class="actions">
+  <button type="button" class="secondary" id="back">← पिछला</button>
+  <button type="button" class="primary" id="next">अगला →</button>
+</div>
+</form>
+
+<div class="card" id="success" style="display:none">
+  <div class="success">
+    <div class="icon">✅</div>
+    <h2>प्रपत्र सफलतापूर्वक पूरा हुआ</h2>
+    <p>आपकी जानकारी इस डिवाइस में सुरक्षित कर दी गई है।</p>
+    <button class="primary" onclick="downloadCSV()">CSV डाउनलोड करें</button>
+    <button class="secondary" onclick="window.print()" style="margin-left:8px">प्रिंट करें</button>
+  </div>
+</div>
+</main>
+
+<script>
+/*
+  PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
+  after deploying the Apps Script as a Web App.
+*/
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxmtv_2LUcX8Q1cjPYlKuZFo20CAXgTZnn6rjEDn7YlL-Fx9zqNIDVmufDa1j2V0EtBxg/exec";
+
+const steps=[...document.querySelectorAll(".step")];
+let current=0;
+const titles=steps.map(s=>s.dataset.title);
+const bar=document.getElementById("bar"), pct=document.getElementById("pct");
+const stepLabel=document.getElementById("stepLabel");
+const back=document.getElementById("back"), next=document.getElementById("next");
+const form=document.getElementById("survey");
+
+function makeRows(id,n,fields){
+  const body=document.getElementById(id);
+  for(let i=0;i<n;i++){
+    const tr=document.createElement("tr");
+    fields.forEach((f,j)=>{
+      const td=document.createElement("td");
+      const input=document.createElement("input");
+      input.name=`${id}_${i}_${j}`;
+      input.placeholder=f;
+      td.appendChild(input); tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  }
+}
+makeRows("members",5,["नाम","संबंध","मोबाइल","आयु"]);
+makeRows("children",4,["नाम","आयु","मोबाइल","वैवाहिक स्थिति"]);
+
+function update(){
+  steps.forEach((s,i)=>s.classList.toggle("active",i===current));
+  const p=Math.round(((current+1)/steps.length)*100);
+  bar.style.width=p+"%"; pct.textContent=p+"%"; stepLabel.textContent=titles[current];
+  back.style.visibility=current===0?"hidden":"visible";
+  next.textContent=current===steps.length-1?"✓ जमा करें":"अगला →";
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function saveDraft(){
+  const data=Object.fromEntries(new FormData(form).entries());
+  localStorage.setItem("samajSurveyDraft",JSON.stringify(data));
+}
+function loadDraft(){
+  try{
+    const data=JSON.parse(localStorage.getItem("samajSurveyDraft")||"{}");
+    Object.entries(data).forEach(([k,v])=>{
+      const els=form.querySelectorAll(`[name="${CSS.escape(k)}"]`);
+      els.forEach(el=>{
+        if(el.type==="radio") el.checked=el.value===v;
+        else el.value=v;
+      });
+    });
+  }catch(e){}
+}
+next.onclick=()=>{
+  if(current<steps.length-1){current++;saveDraft();update();}
+  else{
+    submitSurvey();
+  }
+};
+back.onclick=()=>{if(current>0){current--;update();}};
+form.addEventListener("input",saveDraft);
+loadDraft(); update();
+
+
+async function submitSurvey(){
+  saveDraft();
+
+  const data = Object.fromEntries(new FormData(form).entries());
+  data.submitted_at = new Date().toISOString();
+
+  if(GOOGLE_SCRIPT_URL.includes("PASTE_YOUR_")){
+    alert("पहले GOOGLE_SCRIPT_URL में अपना Google Apps Script Web App URL डालें।");
+    return;
+  }
+
+  next.disabled = true;
+  next.textContent = "जमा हो रहा है…";
+
+  try{
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {"Content-Type":"text/plain;charset=utf-8"},
+      body: JSON.stringify(data)
+    });
+
+    localStorage.removeItem("samajSurveyDraft");
+    form.style.display="none";
+    document.querySelector(".progress-wrap").style.display="none";
+    document.getElementById("success").style.display="block";
+    window.scrollTo({top:0,behavior:"smooth"});
+  }catch(err){
+    console.error(err);
+    alert("सबमिशन नहीं हो सका। इंटरनेट कनेक्शन और Google Script URL जांचें।");
+    next.disabled = false;
+    next.textContent = "✓ जमा करें";
+  }
+}
+
+function downloadCSV(){
+  const data=JSON.parse(localStorage.getItem("samajSurveyDraft")||"{}");
+  const rows=[["Field","Response"]];
+  Object.entries(data).forEach(([k,v])=>rows.push([k,v]));
+  const csv=rows.map(r=>r.map(x=>`"${String(x??"").replaceAll('"','""')}"`).join(",")).join("\n");
+  const blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download="samaj-survey-response.csv"; a.click(); URL.revokeObjectURL(a.href);
+}
+</script>
+</body>
+</html>
